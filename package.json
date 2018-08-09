@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/HosinQM/firstapp/issues"
   },
-  "homepage": "https://github.com/HosinQM/firstapp#readme"
+  "homepage": "https://github.com/HosinQM/firstapp#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
