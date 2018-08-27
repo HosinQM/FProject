@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+
+head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Band Template
+    link(rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon")
+
+    link(rel="stylesheet" href="/css/bulma.min.css")
+    link(rel="stylesheet", href="/css/styles.css")
+    //- script(defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js") --font awesome js TODO: include fontawesome js
+
+
+body
+    nav.navbar.is-dark
+        //- div.navbar-brand
+        //-     a.navbar-item(href="https://bulma.io")
+        //-         img(src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28")
+        //- TODO: place a logo for navbar
+        div.navbar-burger.burger(data-target="navbar")
+            span
+            span
+            span
+        div#navbar.navbar-menu
+            div.navbar-start
+                a.navbar-item(href="javascript:void") Home
+                a.navbar-item(href="javascript:void") Band
+                a.navbar-item(href="javascript:void") Tour
+                a.navbar-item(href="javascript:void") Contact
+                div.navbar-item.has-dropdown.is-hoverable
+                    a.navbar-link(href="/documentation/overview/start/") More
+                    div.navbar-dropdown.is-boxed
+                        a.navbar-item(href="javascript:void") Mechandise
+                        a.navbar-item(href="javascript:void") Extras
+                        a.navbar-item(href="javascript:void") Media
+            div.navbar-end
+                a.navbar-item(href="/signin")
+                    include ../public/icon/account-circle.svg
+    section.container
+        section.tile.is-ancestor
+            section.tile.is-parent
+                article.tile.is-child.notification.is-white
+                    section.card
+                        section.card-content
+                            h3.title Lorem, ipsum.
+                            p Lorem ipsum dolor sit amet.
+                            a.button Read more
+                    section.box
+                    //- content gose here
+            section.tile.is-parent.is-4
+                div.card
+                    div.card-image
+                        figure.image.is-2by1
+                            img(src="holder.js/250x250")
+                    div.card-content
+                        div.media
+                            div.media-content
+                                p.title.is-4 John Smith
+                                p.subtitle.is-6 @johnsmith
+    script(src="/js/holder.min.js")
