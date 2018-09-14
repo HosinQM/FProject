@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        title Signup
+    body
+        section.container
+            section.row
+                section.col-12
+                    p.display-4 Signup
+                    form(action="/verify", method="post")
+                        section.container
+                            section.row
+                                section.form-group.col-4
+                                    label(for="fname") First name
+                                    input.form-control#fname(type="text", name="fname")
+                                section.form-group.col-4
+                                    label(for="lname") Last name
+                                    input.form-control#lname(type="text", name="lname")
+                                section.form-group.col-4
+                                    label(for="username") Username 
+                                    input.form-control#username(type="text", name="username")
+                            section.row
+                                section.form-group.col-6
+                                    label(for="password") Password
+                                    input.form-control#password(type="password", name="password")
+                                section.form-group.col-6
+                                    label(for="retype") Password retype
+                                    input.form-control#retype(type="password", name="retype")
+                            section.row
+                                section.col-12
+                                    label(for="email") Email
+                                    input.form-control#email(type="email", name="email")
+                            section.row
+                                section.col-11.offset-2
+                                    label Birthday Date
+                                    section.row
+                                        section.col-3
+                                            label(for="year") Year
+                                            input.form-control#year(type="text", name="year")
+                                        section.col-3
+                                            label(for="month") Month
+                                            input.form-control#month(type="text", name="month")
+                                        section.col-3
+                                            label(for="day") Day
+                                            input.form-control#day(type="text", name="day")
+                            section.row
+                                section.col-12
+                                    section.form-check.form-check-inline
+                                        label.form-check-label Gender
+                                            br
+                                            input.form-check-input(type="radio", name="", value="")
+                                            label Male
+                                            input.form-check-input(type="radio", name="", value="")
+                                            label Female
+                            section.row
+                                section.col-12
+                                    section.form-check
+                                        label.form-check-label
+                                        input.form-check-input(type="checkbox", name="", id="", value="agree" checked)
+                                        label I agree with terms of use
+                            section.row
+                                button.btn.btn-primary.btn-block(type="submit") Signup
+
+
+
+                                
+                                
+
