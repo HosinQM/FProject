@@ -1,4 +1,5 @@
 const express = require('express')
+const exphdbs = require('express-handlebars')
 const path = require('path')
 const app = express()
 const port = 3000
@@ -9,26 +10,13 @@ const users = require('./Database/users')
 app.use('/idols', idols)
 app.use('/users', users)
 
-app.set('views', `${__dirname}/views`)
-app.set('view engine', 'pug')
+app.engine('.hbs', exphdbs({ defaultLayout: 'main', extname: '.hbs' }))
+app.set('view engine', '.hbs')
 
 app.use(express.static(`${__dirname}/public`))
 
-
 app.get('/', (req, res) => {
-    res.render('index')
-})
-
-app.get('/signin', (req, res) => {
-    res.render('signin')
-})
-
-app.get('/signup', (req, res) => {
-    res.render('signup')
-})
-
-app.post('/verify', (req, res) => {
-    res.render('verify')
+    res.render('home')
 })
 
 app.listen(port, () => {
