@@ -1,0 +1,11 @@
+.idol-bar{
+    border-radius: 0.2rem;
+    background-color: rgb(255, 84, 53);
+    color: white;
+    transition: 0.5s all ease 0s;
+    width: 2.5rem
+}
+
+.idol-bar:hover{
+    width: 25.5rem
+}

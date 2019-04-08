@@ -1,6 +1,7 @@
 const express = require('express')
 const exphdbs = require('express-handlebars')
-const path = require('path')
+const hbs = require('hbs')
+// const path = require('path')
 const app = express()
 const port = 3000
 
@@ -15,8 +16,18 @@ app.set('view engine', '.hbs')
 
 app.use(express.static(`${__dirname}/public`))
 
+hbs.registerPartials(__dirname + '/views/partials')
+
 app.get('/', (req, res) => {
     res.render('home')
+})
+
+app.get('/signup', (req, res) => {
+    res.render('signup')
+})
+
+app.get('/results', (req, res) => {
+    res.render('results')
 })
 
 app.listen(port, () => {
